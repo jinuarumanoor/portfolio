@@ -12,7 +12,7 @@
     <!-- Box Icons -->
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -30,7 +30,7 @@
             <li><a href="#Resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
             <div class="bx bx-moon" id="darkmode"></div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+           
         </ul>
     </header>
     <!-- Home -->
@@ -254,17 +254,21 @@
             <span>Connect With Us</span>
         </div>
         <div class="column">
-            <form id="submit-form"  action="">
+            <form id="submit-form"  action="" onsubmit="return validate()">
                 <label for="fnmae">First Name</label>
-                <input type="text" id="fname" name="name " placeholder="Your name " required>
+
+                <input type="text" id="fname" name="name " placeholder="Your name " >
+                <p class="error text-danger"></p>
                 <label for="lname">Email</label>
-                <input type="email" id="lname" name="email" placeholder="your last name" required>
+                <input type="email" id="email" name="email" placeholder="your last name">
+                <p class="error text-danger"></p>
               
                 
                 </select>
                 <label for="subject">subject</label>
-                <textarea id="subject" name="message" placeholder="Write something" required style="height:170px ;"></textarea>
+                <textarea id="message" name="message" placeholder="Write something" style="height:170px ;"></textarea>
                 <input type="submit" value="submit" class="contact-button">
+                <p class="error text-danger"></p>
            
                 
             </form>
@@ -281,6 +285,7 @@
  
     <!-- Link To JS -->
     <script src="./js/script.js"></script>
+   
     <srcipt src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></srcipt>
    
     <script>
